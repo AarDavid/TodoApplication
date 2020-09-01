@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo-application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/styles/style.css">
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <a id="hiofLink" href="#">HIOF</a>
+            <a id="userLink" href="#">User user</a>
+        </nav>
+    </header>
+    <main id="mainContent">
+        <section id="createTodoElement">
+            <button id="createTodoBtn">+ Todo</button>
+        </section>
+        <section id="todoList">
+            <div class="todoElement">
+                <h1>Headline</h1>
+                <p>Text Text Text Text Text Text Text Text Text </p>
+                <div class="todoElementBtns">
+                    <button class="removeTodoBtn">Delete</button>
+                    <button class="completeTodoBtn">Complete</button>
+                </div>
+            </div>
+            <div class="todoElement">
+                <h1>Headline</h1>
+                <p>Text Text Text Text Text Text Text Text Text </p>
+                <div class="todoElementBtns">
+                    <button class="removeTodoBtn">Delete</button>
+                    <button class="completeTodoBtn">Complete</button>
+                </div>
+            </div>
+            <div class="todoElement">
+                <h1>Headline</h1>
+                <p>Text Text Text Text Text Text Text Text Text </p>
+                <div class="todoElementBtns">
+                    <button class="removeTodoBtn">Delete</button>
+                    <button class="completeTodoBtn">Complete</button>
+                </div>
+            </div>
+        </section>
+        <section id="completedTodos">
+            <h2>Completed Todos</h2>
+            <div id="CompletedTodosList">
+                <div class="listRow" id="listHeadlines">
+                    <p>Title</p>
+                    <p>Author</p>
+                    <p>Description</p>
+                    <p>Completed date</p>
+                </div>
+                <div id="listElements">
+                    <div class="listRow" class="listElement">
+                        <p>1</p>
+                        <p>2</p>
+                        <p>3</p>
+                        <p>4</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div id="modal" style="display: none;">
+            <div id="modalContent">
+                <div id="modalContentTop">
+                    <h2>New Todo</h2>
+                    <h2 id="closeCreateTodo">X</h2>
+                </div>
+                <div id="modalContentBottom">
+                    <div>
+                        <p>Title</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p>Description</p>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <p>Author</p>
+                        <input type="text">
+                    </div>
+                    <button id="createTodoConfirmBtn">Create</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

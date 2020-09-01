@@ -1,0 +1,203 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p, a, button {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* ----- NAV START----- */
+
+#nav {
+    padding: 30px 18px;
+    background-color: #ffffff;
+    box-shadow: 0px 6px 10px #00000019;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+}
+
+#nav #hiofLink {
+    font-weight: bold;
+}
+
+/* ----- NAV END ----- */
+
+#mainContent {
+    margin: 77px 16%;
+}
+
+/* ----- CreateTodo START ----- */
+
+#createTodoElement {
+    margin-bottom: 70px;
+}
+
+#createTodoBtn {
+    padding: 15px 50px;
+    font-size: 23px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 2px solid #000;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#createTodoBtn:hover {
+    background-color: #56D4C2;
+}
+
+/* ----- CreateTodo END ----- */
+
+/* ----- TodoList START ----- */
+
+#todoList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 4%;
+}
+
+.todoElement {
+    padding: 30px;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px #5DD3D829;
+    border-radius: 8px;
+}
+
+.todoElementBtns {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.todoElementBtns button {
+    padding: 4px 20px;
+    border-radius: 4px;
+    border: 0px;
+    color: #ffffff;
+    cursor: pointer;
+    margin-left: 4px;
+    transition: 0.3s;
+}
+
+.removeTodoBtn {
+    background-color: #EF3340;
+}
+
+.removeTodoBtn:hover {
+    background-color: #de212e;
+}
+
+.completeTodoBtn {
+    background-color: #56D4C2;
+}
+
+.completeTodoBtn:hover {
+    background-color: #49b6a8;
+}
+
+/* ----- TodoList END ----- */
+
+/* ----- CompletedTodos START ----- */
+
+#completedTodos {
+    margin-top: 70px;
+    width: 100%;
+}
+
+#completedTodosList {
+    margin-top: 4px;
+}
+
+#listHeadlines {
+    background-color: #E6E6E6;
+    padding: 6px 35px;
+}
+
+#listElements .listRow {
+    padding: 12px 35px;
+}
+
+.listRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.listRow p {
+    margin: 0px;
+}
+
+/* ----- CompletedTodos END ----- */
+
+/* ----- Modal START ----- */
+
+#modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(213, 213, 213, 0.7);
+}
+
+#modalContent {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 326px;
+    background-color: #ffffff;
+    padding: 18px 40px 42px 40px;
+    border-radius: 8px;
+}
+
+#modalContentTop {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid grey;
+}
+
+#modalContentTop h2 {
+    font-size: 14px;
+}
+
+#modalContentBottom {
+    margin-top: 28px;
+    display: grid;
+    grid-row-gap: 16px;
+}
+
+#modalContentBottom div p {
+    margin-bottom: 3px;
+    margin-top: 0px;
+    font-weight: bold;
+}
+
+#modalContentBottom div input {
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #B6B6B6;
+    padding: 10px 13px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-size: 16px;
+}
+
+#createTodoConfirmBtn {
+    background-color: #56D4C2;
+    width: 100%;
+    border: 0px;
+    color: #ffffff;
+    font-size: 16px;
+    padding: 7px 0px;
+}
+
+/* ----- Modal END ----- */
