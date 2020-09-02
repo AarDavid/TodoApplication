@@ -63,6 +63,7 @@ h1, h2, h3, h4, h5, h6, p, a, button {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-column-gap: 4%;
+    grid-row-gap: 32px;
 }
 
 .todoElement {

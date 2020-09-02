@@ -19,30 +19,6 @@
             <button id="createTodoBtn">+ Todo</button>
         </section>
         <section id="todoList">
-            <div class="todoElement">
-                <h1>Headline</h1>
-                <p>Text Text Text Text Text Text Text Text Text </p>
-                <div class="todoElementBtns">
-                    <button class="removeTodoBtn">Delete</button>
-                    <button class="completeTodoBtn">Complete</button>
-                </div>
-            </div>
-            <div class="todoElement">
-                <h1>Headline</h1>
-                <p>Text Text Text Text Text Text Text Text Text </p>
-                <div class="todoElementBtns">
-                    <button class="removeTodoBtn">Delete</button>
-                    <button class="completeTodoBtn">Complete</button>
-                </div>
-            </div>
-            <div class="todoElement">
-                <h1>Headline</h1>
-                <p>Text Text Text Text Text Text Text Text Text </p>
-                <div class="todoElementBtns">
-                    <button class="removeTodoBtn">Delete</button>
-                    <button class="completeTodoBtn">Complete</button>
-                </div>
-            </div>
         </section>
         <section id="completedTodos">
             <h2>Completed Todos</h2>
@@ -54,7 +30,7 @@
                     <p>Completed date</p>
                 </div>
                 <div id="listElements">
-                    <div class="listRow" class="listElement">
+                    <div class="listRow listElement">
                         <p>1</p>
                         <p>2</p>
                         <p>3</p>
@@ -73,15 +49,15 @@
                 <div id="modalContentBottom">
                     <div>
                         <p>Title</p>
-                        <input type="text">
+                        <input id="todoTitle" type="text">
                     </div>
                     <div>
                         <p>Description</p>
-                        <input type="text">
+                        <input id="todoDescription" type="text">
                     </div>
                     <div>
                         <p>Author</p>
-                        <input type="text">
+                        <input id="todoAuthor" type="text">
                     </div>
                     <button id="createTodoConfirmBtn">Create</button>
                 </div>
