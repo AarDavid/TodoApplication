@@ -38,22 +38,26 @@ document.getElementById("createTodoConfirmBtn").addEventListener("click", functi
 
     printDataTodos();
 
-    console.log(todoList);
-
     modal.style.display = "none";
 });
 
 function printDataTodos() {
+    var iteration = 3
     todoListDiv.innerHTML = "";
-    for(var i = 0; i < todoList.length; i++){
+    
+    for(var i = todoList.length - 1; i >= 0; i--){
         var output = "<div class='todoElement' value='" + i + "'>" + "<h1>" + todoList[i].title + "</h1>" + "<p>" + todoList[i].description + "</p>"
         + "<div class='todoElementBtns'><button onclick='removeElement(this)' class='removeTodoBtn'>Delete</button><button onclick='completeElement(this)' class='completeTodoBtn'>Complete</button></div>"
         + "</div>";
-        
+
         todoListDiv.innerHTML += output;
+        
+        iteration--;
+        if(iteration === 0) {
+            break;
+        }
     }
 }
-
 
 function removeElement(element) {
     var currentElement =  element.parentNode.parentNode;
@@ -65,11 +69,7 @@ function removeElement(element) {
     }
     currentElement.remove();
     printDataTodos();
-
-    console.log(todoList);
 }
-
-
 
 function printDataCompletedTodos() {
     var completedTodoListDiv = document.getElementById("listElements");
@@ -80,16 +80,13 @@ function printDataCompletedTodos() {
         + "<p>" + completedTodoList[i].author + "</p>" + "<p> Not yet</p>"
         
         completedTodoListDiv.innerHTML += output;
-
     }
 }
-
 
 function completeElement(element) {
     var currentElement = element.parentNode.parentNode;
     var currentElementValue = currentElement.getAttribute("value");
     
-
     for(var i = 0; i < todoList.length; i++) {
         if(parseInt(currentElementValue) === i) {
             completedTodoList.push ({
@@ -104,9 +101,4 @@ function completeElement(element) {
             currentElement.remove();
         }
     }
-
-    console.log("Todo list")
-    console.log(todoList);
-    console.log("Completed todo list")
-    console.log(completedTodoList);
 }
