@@ -4,8 +4,22 @@ var title = "";
 var description = "";
 var author = "";
 
-var todoList = [];
+var localStorageTodo = localStorage.getItem("TodoList");
+var parsedLocalStorageTodo = JSON.parse(localStorageTodo);
+var todoList;
 var completedTodoList = [];
+
+if (localStorage.getItem("TodoList") === null) {
+    todoList = [];
+  }else {
+      todoList = parsedLocalStorageTodo;
+  }
+
+window.onload = loadPage;
+
+function loadPage() {
+    printDataTodos();
+}
 
 document.getElementById("createTodoBtn").addEventListener("click", function() {
     modal.style.display = "block";
@@ -36,6 +50,9 @@ document.getElementById("createTodoConfirmBtn").addEventListener("click", functi
         "author": author
     });
 
+    localStorage.setItem("TodoList", JSON.stringify(todoList));
+
+    console.log(todoList);
     printDataTodos();
 
     modal.style.display = "none";
